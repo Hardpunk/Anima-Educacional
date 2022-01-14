@@ -1,18 +1,37 @@
-/vendor/
-node_modules/
+/node_modules
+/public/hot
+/public/storage
+/storage/*.key
+/vendor
+.env
+.env.backup
+.phpunit.result.cache
+docker-compose.override.yml
+Homestead.json
+Homestead.yaml
 npm-debug.log
 yarn-error.log
+/.idea
+/.vscode
 
-# Laravel 4 specific
-bootstrap/compiled.php
-app/storage/
+public/images/banners/original/
 
-# Laravel 5 & Lumen specific
-public/storage
-public/hot
-storage/*.key
-.env
-Homestead.yaml
-Homestead.json
-/.vagrant
-.phpunit.result.cache
+_ide_helper_models.php
+
+_ide_helper.php
+
+.phpstorm.meta.php
+
+public/images/favicon/bkp/
+
+public/images/favicon/4859509bd49fbb775637f148fb00eb1b.ico.zip
+
+public/js/app.js.LICENSE.txt
+
+public/js/checkout.js.LICENSE.txt
+
+public/js/home.js.LICENSE.txt
+
+public/images/cursos/original/
+
+public/js/admin.js.LICENSE.txt
