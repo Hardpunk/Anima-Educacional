@@ -27,5 +27,9 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         setlocale(LC_ALL, 'pt-BR.UTF-8', 'pt-BR.UTF-8');
+
+        $this->app->bind ('path.public', function() {
+            return base_path().'/public';
+        });
     }
 }

@@ -65,7 +65,7 @@
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
 
     <link rel="stylesheet" href="{{ asset('vendor/mdb/css/mdb.min.css') }}">
-    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" href="//cdn.linearicons.com/free/1.0.0/icon-font.min.css">
 
     @yield('css')

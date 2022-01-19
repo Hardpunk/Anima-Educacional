@@ -1,6 +1,6 @@
 <section class="mt-0 choose-category text-center py-5 mb-6 bg-area-curso">
     <div class="container-lg align-items-center">
-        <h3 class="title d-block">Mais de <b>1000 cursos</b> online em diversas áreas com <b>certificado</b>.
+        <h3 class="title d-block">Diversos <strong>cursos online</strong> em diversas áreas com <strong>certificado</strong>.
             <br/>
             O que você quer <b>aprender</b> hoje?
         </h3>

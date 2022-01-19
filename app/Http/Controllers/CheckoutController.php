@@ -286,7 +286,6 @@ class CheckoutController extends Controller
             }
 
             $payment = Payment::create($paymentArray);
-
             if ($transaction->status == 'paid') {
                 $newUserId = 0;
                 foreach ($cartItems['items'] as $item) {

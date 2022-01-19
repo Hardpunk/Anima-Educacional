@@ -34,8 +34,8 @@
                     <img src="{{ asset('images/logo.png') }}" alt="{{ config('app.name') }}" class="img-fluid">
                 </a>
                 <div class="col-md-12 social-media text-center mt-2">
-                    <a href="https://www.facebook.com/institutoacesso.dc"> <i class="fab fa-2x fa-facebook"></i></a>
-                    <a href="https://www.instagram.com/institutoacesso.dc"> <i class="fab fa-2x fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/animaeducacional"> <i class="fab fa-2x fa-facebook"></i></a>
+                    <a href="https://instagram.com/seranimaeducacional?utm_medium=copy_link"> <i class="fab fa-2x fa-instagram"></i></a>
                 </div>
             </div>
 
@@ -68,9 +68,10 @@
     <div class="subfooter container-fluid py-4">
         <div class="row">
             <div class="col-12 text-center">
-                <h5 class="font-weight-bold mb-3">Instituto Acesso - Desenvolvimento de Carreiras</h5>
-                <h5 class="mb-3">Goiânia - GO</h5>
-                <h3 class="font-weight-bold mb-0">Fone: (62) 98115-4676</h3>
+                <h5 class="font-weight-bold mb-3">SER ANIMA EDUCACIONAL</h5>
+                <h5 class="mb-3">Rua Quinzinho Otávio, 317, Centro, Vargem Grande do Sul-SP</h5>
+                <h5 class="font-weight-bold mb-3">eduardocaju13@gmail.com</h5>
+                <h3 class="font-weight-bold mb-0">Fone: (19) 97169-5820</h3>
             </div>
         </div>
     </div>
@@ -150,11 +151,16 @@
     <div class="subfooter container-fluid py-3">
         <div class="row">
             <div class="col-12 text-center">
-                <h5 class="font-weight-bold mb-3">Instituto Acesso - Desenvolvimento de Carreiras</h5>
-                <h5 class="mb-3">Goiânia- GO</h5>
-                <h3 class="font-weight-bold mb-0">Fone: (62) 98115-4676</h3>
+                <h5 class="font-weight-bold mb-3">SER ANIMA EDUCACIONAL</h5>
+                <h5 class="mb-3">Rua Quinzinho Otávio, 317, Centro, Vargem Grande do Sul-SP</h5>
+                <h5 class="font-weight-bold mb-3">eduardocaju13@gmail.com</h5>
+                <h3 class="font-weight-bold mb-0">Fone: (19) 97169-5820</h3>
             </div>
         </div>
     </div>
     <p class="copyright m-0 font-weight-bold">{{ config('app.name') }} &copy; {{ date('Y') }}</p>
 </footer>
+
+<a href="https://api.whatsapp.com/send?phone=5519971695820&text=Ol%C3%A1%2C%20encontrei%20o%20n%C3%BAmero%20no%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" class="btn-whatsapp-pulse btn-whatsapp-pulse-border" title="Estamos online no WhatsApp">
+	<i class="fab fa-whatsapp"></i>
+</a>

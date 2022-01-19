@@ -1,12 +1,12 @@
-<section id="contato__wrapper" class="py-5 paroller"
-         data-paroller-factor="0.4"
+<section id="contato__wrapper" class="paroller"
+         data-paroller-factor="0"
          data-paroller-factor-xs="0.2"
          data-paroller-factor-sm="0.3">
     <div class="container">
         <h3 class="title d-block text-uppercase text-white text-center mb-4">CONTATO</h3>
         <div class="row">
             <div class="col-sm-12 col-md-8 offset-md-2">
-                <form id="form-contato">
+                <form id="form-contato" class="text-center">
                     @csrf
                     <div class="form-group">
                         <input type="text" id="name" name="name" placeholder="NOME" class="form-control" required/>
@@ -26,7 +26,7 @@
                                   class="form-control" required></textarea>
                     </div>
 
-                    <div class="mb-3">
+                    <div class="mb-3 d-flex justify-content-center">
                         {!! htmlFormSnippet() !!}
                     </div>
 
