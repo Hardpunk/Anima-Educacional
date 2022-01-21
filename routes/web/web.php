@@ -135,14 +135,9 @@ Route::group(
 | CRON Jobs Routes
 |--------------------------------------------------------------------------
 */
-Route::group(
-    ['prefix' => '/cron'],
-    function () {
-        Route::get('/load_api_files', 'IpedAPIController@load_api_files')->name('cronjobs.load_api_files');
-        Route::get('/course_sync/{category}/{course}', 'CourseController@courseSync')->name('cronjobs.course_sync');
-        Route::get('/category_sync/', 'CourseController@categorySync')->name('cronjobs.category_sync');
-        Route::get('/category_courses_sync', 'CourseController@categoryCourses')->name(
-            'cronjobs.category_courses_sync'
-        );
-    }
-);
+Route::group(['prefix' => '/cron'], function () {
+    Route::get('/load_api_files', 'IpedAPIController@load_api_files')->name('cronjobs.load_api_files');
+    Route::get('/course_sync/{category}/{course}', 'CourseController@courseSync')->name('cronjobs.course_sync');
+    Route::get('/category_sync', 'CourseController@categorySync')->name('cronjobs.category_sync');
+    Route::get('/category_courses_sync/{start?}', 'CourseController@categoryCourses')->name('cronjobs.category_courses_sync');
+});

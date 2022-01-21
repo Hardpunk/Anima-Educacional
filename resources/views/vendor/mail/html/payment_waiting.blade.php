@@ -101,7 +101,7 @@
                                                     </p>
                                                     <p
                                                         style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787e; font-size: 14px; line-height: 1.5em; text-align: left;">
-                                                        <span>Whatsapp - (62) 98115-4676</span>
+                                                        <span>Whatsapp - (19) 97169-5820</span>
                                                     </p>
                                                 </td>
                                             </tr>

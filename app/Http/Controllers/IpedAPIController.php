@@ -62,6 +62,29 @@ class IpedAPIController extends Controller
         return $this->client->post('/category/get-categories', ['query' => ['slug' => $slug]]);
     }
 
+    /**
+     * @param string $id
+     * @param int|null $type
+     * @return array|mixed
+     */
+    public function get_courses_by_category_id($id, $type = null)
+    {
+        $query = [
+            'category_id' => $id,
+            'always_show' => 1,
+            'results' => 1000,
+        ];
+
+        if ($type) {
+            $query['type'] = $type;
+        }
+
+        return $this->client
+            ->post('/course/get-courses', [
+                'query' => $query,
+            ]);
+    }
+
     public function user_registration($arrayData)
     {
         return $this->client->post('/user/set-registration', ['query' => $arrayData]);

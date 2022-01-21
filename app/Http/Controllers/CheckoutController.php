@@ -24,7 +24,7 @@ class CheckoutController extends Controller
 {
     const INDIVIDUAL = 'cpf';
     const BUSINESS = 'cnpj';
-    const CALLBACK_URL = 'https://www.institutoacesso.com.br/pagarme/callback';
+    const CALLBACK_URL = 'https://www.seranima.com.br/pagarme/callback';
     const COOKIE_EXPIRATION_TIME = (60 * 24 * 30);
 
     /** @var Client $pagarme */

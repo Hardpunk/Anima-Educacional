@@ -159,12 +159,14 @@ class CourseController extends IpedAPIController
      *
      * @return void
      */
-    public function categoryCourses()
+    public function categoryCourses($start = 0)
     {
         ini_set('memory_limit', -1);
         ini_set('max_execution_time', 0);
 
-        $categorias = Category::all();
+        $offset = ($start * 3);
+        $categorias = Category::skip($offset)->take(3)->get();
+
         foreach ($categorias as $categoria) {
             for ($i = 1; $i <= 3; $i++) {
                 $_categoria = $this->get_courses_by_category_id($categoria->category_id, $i);
