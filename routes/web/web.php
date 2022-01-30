@@ -75,6 +75,10 @@ Route::get('/search', 'SearchController@search')->name('search');
 
 // Route::get('/termos-de-uso', 'PageController@termos')->name('termos-de-uso');
 
+Route::get('/quem-somos', 'PageController@about')->name('quem-somos');
+
+Route::get('/projetos-sociais', 'PageController@projects')->name('projetos-sociais');
+
 // Course routes group
 Route::group(
     ['prefix' => '/cursos'],

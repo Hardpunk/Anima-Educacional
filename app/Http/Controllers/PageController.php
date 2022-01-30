@@ -40,6 +40,16 @@ class PageController extends Controller
         return view('pages.condicoes-gerais');
     }
 
+    public function about()
+    {
+        return view('pages.quem-somos');
+    }
+
+    public function projects()
+    {
+        return view('pages.projetos-sociais');
+    }
+
     public function contato()
     {
         return view('pages.contato');

@@ -1,7 +1,4 @@
-<section id="contato__wrapper" class="paroller"
-         data-paroller-factor="0"
-         data-paroller-factor-xs="0.2"
-         data-paroller-factor-sm="0.3">
+<section id="contato__wrapper">
     <div class="container">
         <h3 class="title d-block text-uppercase text-white text-center mb-4">CONTATO</h3>
         <div class="row">

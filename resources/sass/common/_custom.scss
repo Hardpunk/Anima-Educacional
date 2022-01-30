@@ -198,7 +198,10 @@ body {
   &:not(.mobile) {
     .nav-item {
       line-height: 1;
-      margin-left: 20px;
+
+      &:last-child{
+        margin-left: 20px;
+      }
 
       &.cart-button {
         position: relative;
@@ -413,6 +416,9 @@ body {
     > .dropdown-item {
       color: #888;
       text-transform: uppercase;
+      &:hover {
+        background-color: $theme-color-1;
+      }
     }
   }
 }

@@ -19,13 +19,13 @@
 @endphp
 <div class="container-fluid">
     <div class="menu d-none d-md-block">
-        <div class="row d-flex align-items-center px-lg-3 py-3">
+        <div class="row d-flex align-items-center justify-content-between px-lg-3 py-3">
             <div class="col-md-5 col-xl-2 text-center text-xl-left">
                 <a class="navbar-brand" href="/">
                     <img src="{{ asset('images/logo.png') }}" alt="{{ config('app.name') }}" class="logo img-fluid"/>
                 </a>
             </div>
-            <div class="col-md-7 col-xl-4">
+            <div class="col-md-5 col-xl-3">
                 <div class="search-wrapper mb-0 d-flex justify-content-center">
                     <form action="{{ route('search') }}" method="GET" role="search" class="form-search-box">
                         <input autocomplete="off" type="text" class="form-control search-input" name="q"/>
@@ -40,18 +40,38 @@
                     </form>
                 </div>
             </div>
-            <div class="col-md-12 col-xl-6">
+            <div class="col-md-12 col-xl-6 d-flex justify-content-center justify-content-lg-end">
                 <ul class="navbar-nav float-right flex-row align-items-center mb-xl-1">
                     <li class="nav-item {{ Request::is('/*') ? 'active' : '' }}">
                         <a href="/" class="nav-link">Início</a>
                     </li>
 
-                    <li class="nav-item {{ Request::is('cursos*') ? 'active' : '' }}">
-                        <a href="/cursos" class="nav-link">Cursos</a>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownSerAnima" role="button" data-toggle="dropdown" aria-expanded="false">Ser Ânima</a>
+
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownSerAnima">
+                            <a class="dropdown-item" href="/quem-somos">Quem Somos</a>
+                            <a class="dropdown-item" href="/projetos-sociais">Projetos Sociais</a>
+                        </div>
                     </li>
 
-                    <li class="nav-item">
-                        <a href="/#contato__wrapper" class="nav-link">Contato</a>
+                    <li class="nav-item dropdown {{ Request::is('cursos*') ? 'active' : '' }}">
+                        <a href="/cursos" class="nav-link dropdown-toggle" id="navbarDropdownCursos" role="button" data-toggle="dropdown" aria-expanded="false">Cursos</a>
+                        
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownCursos">
+                            <a class="dropdown-item" href="#" target="_blank">Online ao vivo</a>
+                            <a class="dropdown-item" href="#" target="_blank">Presencial</a>
+                            <a class="dropdown-item" href="#" target="_blank">Treilhas do conhecimento</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a href="" class="nav-link dropdown-toggle" id="navbarDropdownContatos" role="button" data-toggle="dropdown" aria-expanded="false">Contatos</a>
+
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownContatos">
+                            <a class="dropdown-item" href="/#contato__wrapper">Fale conosco</a>
+                            <a class="dropdown-item" href="/#contato__wrapper">Trabalhe conosco</a>
+                        </div>
                     </li>
 
                     <li class="nav-item">
