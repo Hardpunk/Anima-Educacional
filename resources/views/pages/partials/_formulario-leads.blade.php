@@ -68,6 +68,7 @@
                             </div>
         
                             <div class="form-group">
+                                <label for="file-label" class="file float-left text-danger"><small>Selecione um curriculo no formato PDF</small></label>
                                 <input type="file" id="file" name="resume" class="form-control" required/>
                             </div>
         

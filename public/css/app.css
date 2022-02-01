@@ -22636,6 +22636,14 @@ section#contato__wrapper form#form-resume textarea {
   height: 50px;
   color: #26251c;
 }
+section#contato__wrapper form#form-contato label.file,
+section#contato__wrapper form#form-resume label.file {
+  margin: 0;
+}
+section#contato__wrapper form#form-contato label.file small,
+section#contato__wrapper form#form-resume label.file small {
+  font-weight: bold;
+}
 section#contato__wrapper form#form-contato .form-control::-webkit-input-placeholder,
 section#contato__wrapper form#form-resume .form-control::-webkit-input-placeholder {
   color: #adb5bd;

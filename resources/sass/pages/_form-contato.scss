@@ -62,6 +62,14 @@ section#contato__wrapper {
       color: $theme-color-1;
     }
 
+    label.file {
+      margin:0;
+
+      small {
+        font-weight: bold;
+      }
+    }
+
     .form-control {
       &::-webkit-input-placeholder {
         color: $gray-500;
