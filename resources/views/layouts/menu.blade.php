@@ -64,6 +64,13 @@
 </li>
 
 <li class="nav-item">
+    <a href="{{ route('admin.resumes.index') }}" class="nav-link {{ Request::is('painel/resume*') ? 'active' : '' }}">
+        <i class="nav-icon fas fa-copy"></i>
+        <p>Currículo</p>
+    </a>
+</li>
+
+<li class="nav-item">
     <a href="{{ route('admin.newsletters.index') }}" class="nav-link {{ Request::is('painel/newsletters*') ? 'active' : '' }}">
         <i class="nav-icon fas fa-envelope"></i>
         <p>Newsletters</p>

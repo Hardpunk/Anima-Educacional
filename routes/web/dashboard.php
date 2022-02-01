@@ -54,6 +54,7 @@ Route::prefix('painel')->name('admin.')->group(
                         Route::resource('banners', 'BannerController');
                         Route::resource('newsletters', 'NewsletterController')->only(['index', 'destroy']);
                         Route::resource('contacts', 'ContactController')->only(['index', 'show', 'destroy']);
+                        Route::resource('resumes', 'ResumeController')->only(['index', 'show', 'destroy']);
 
                         Route::fallback(function() {
                             return redirect(route('admin.home'));

@@ -416,6 +416,59 @@ $(function () {
     }
   });
 
+  $("#btn-resume-send").on("click", function () {
+    let $this = $(this),
+      $form = $this.closest("form"),
+      $responseMessage = $form.find('.formResponse'),
+      isValid = $form[0].reportValidity();
+      
+      let file = document.getElementById('file');
+      let formData = new FormData($form[0]);
+      formData.append( 'resume', file.files[0]);
+
+      if (isValid) {
+      $.ajax({
+        url: "/ajax/resume",
+        type: "POST",
+        data: formData,
+        cache:false,
+        contentType: false,
+        processData: false,
+        beforeSend: function () {
+          $this.button("loading");
+        }
+      }).done(function (data) {
+          if (data.status === true) {
+            $form.html(`
+                        <div class="alert alert-success mb-0" role="alert">
+                            ${data.message}
+                        </div>`);
+          } else {
+            $this.button("reset");
+            grecaptcha.reset();
+            $responseMessage.html(`
+                        <div class="alert alert-danger alert-dismissible fade show mb-0 mt-2" role="alert">
+                            Erro ao cadastrar e-mail.
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>`);
+          }
+        })
+        .fail(function (error) {
+          $this.button("reset");
+          grecaptcha.reset();
+          $responseMessage.html(`
+                    <div class="alert alert-danger alert-dismissible fade show mb-0 mt-2" role="alert">
+                        Erro ao cadastrar e-mail.
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>`);
+        });
+    }
+  });
+
   // BLUR EVENTS
   $(".search-input").on("blur", function () {
     if (!$(".search-input").val()) {

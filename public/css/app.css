@@ -22589,7 +22589,7 @@ section#contato__wrapper {
   color: #fff !important;
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   position: relative;
   padding: 10em 0;
 }
@@ -22611,38 +22611,51 @@ section#contato__wrapper h3.title {
   font-size: 2.5em;
   font-weight: 700;
 }
-section#contato__wrapper form#form-contato label {
+section#contato__wrapper form#form-resume textarea {
+  min-height: 85px !important;
+}
+section#contato__wrapper form#form-contato label,
+section#contato__wrapper form#form-resume label {
   font-size: 0.875rem;
 }
-section#contato__wrapper form#form-contato textarea {
+section#contato__wrapper form#form-contato textarea,
+section#contato__wrapper form#form-resume textarea {
   resize: none;
   min-height: 150px;
 }
-section#contato__wrapper form#form-contato button {
+section#contato__wrapper form#form-contato button,
+section#contato__wrapper form#form-resume button {
   width: 150px;
   color: #26251c;
   font-size: 0.875rem;
 }
-section#contato__wrapper form#form-contato input, section#contato__wrapper form#form-contato textarea {
+section#contato__wrapper form#form-contato input, section#contato__wrapper form#form-contato textarea,
+section#contato__wrapper form#form-resume input,
+section#contato__wrapper form#form-resume textarea {
   font-weight: bold;
   height: 50px;
   color: #26251c;
 }
-section#contato__wrapper form#form-contato .form-control::-webkit-input-placeholder {
+section#contato__wrapper form#form-contato .form-control::-webkit-input-placeholder,
+section#contato__wrapper form#form-resume .form-control::-webkit-input-placeholder {
   color: #adb5bd;
 }
-section#contato__wrapper form#form-contato .form-control:-moz-placeholder {
-  color: #adb5bd;
-  opacity: 1;
-}
-section#contato__wrapper form#form-contato .form-control::-moz-placeholder {
+section#contato__wrapper form#form-contato .form-control:-moz-placeholder,
+section#contato__wrapper form#form-resume .form-control:-moz-placeholder {
   color: #adb5bd;
   opacity: 1;
 }
-section#contato__wrapper form#form-contato .form-control:-ms-input-placeholder {
+section#contato__wrapper form#form-contato .form-control::-moz-placeholder,
+section#contato__wrapper form#form-resume .form-control::-moz-placeholder {
+  color: #adb5bd;
+  opacity: 1;
+}
+section#contato__wrapper form#form-contato .form-control:-ms-input-placeholder,
+section#contato__wrapper form#form-resume .form-control:-ms-input-placeholder {
   color: #adb5bd;
 }
-section#contato__wrapper form#form-contato .form-control::-ms-input-placeholder {
+section#contato__wrapper form#form-contato .form-control::-ms-input-placeholder,
+section#contato__wrapper form#form-resume .form-control::-ms-input-placeholder {
   color: #adb5bd;
 }
 

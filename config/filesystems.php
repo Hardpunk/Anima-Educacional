@@ -42,6 +42,13 @@ return [
             'visibility' => 'public',
         ],
 
+        'resumes' => [
+            'driver'        => 'local',
+            'root'          => public_path() . '/resumes',
+            'url'           => env('APP_URL') . '/public_html',
+            'visibility'    => 'public'
+        ],  
+
         's3' => [
             'driver' => 's3',
             'key' => env('AWS_ACCESS_KEY_ID'),

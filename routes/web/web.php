@@ -130,7 +130,8 @@ Route::group(
             }
         );
         Route::post('/newsletter', 'Admin\NewsletterController@store')->name('ajax.newsletter.store');
-        Route::post('/contact', 'Admin\ContactController@store')->name('ajax.newsletter.store');
+        Route::post('/contact', 'Admin\ContactController@store')->name('ajax.contact.store');
+        Route::post('/resume', 'Admin\ResumeController@store')->name('ajax.resume.store');
     }
 );
 
