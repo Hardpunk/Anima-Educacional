@@ -92,7 +92,13 @@ class CheckoutController extends Controller
                                     'category_slug',
                                     'old_price',
                                     'price',
-                                    'image'
+                                    'image',
+                                    'installment_no_interest',
+                                    'max_installment',
+                                    'is_course_with_interest',
+                                    'is_free_course',
+                                    'discounted_price',
+                                    'discount_flag'
                                 ]
                             );
                         }
@@ -106,6 +112,68 @@ class CheckoutController extends Controller
             }
         }
 
+        $discount = 1;
+        $porcentagem_curso = get_settings('interest_installment')->value;
+
+        $parcelas_cursos = [];
+        $valores_cursos = [];
+        $parcelas_sem_juros_cursos = [];
+        $is_course_with_interest = [];
+        $x_juros = [];
+
+        $cursos = [];
+        foreach($items as $k => $cart_item){
+
+            $cursos[] = Course::find($cart_item->id);
+
+            array_push($parcelas_cursos, $cursos[$k]['max_installment']);
+            array_push($valores_cursos, ($cursos[$k]['discount_flag'] == 1 ? ($cursos[$k]['discounted_price'] * $discount) : ($cursos[$k]['price'] * $discount)));
+            array_push($parcelas_sem_juros_cursos, $cursos[$k]['installment_no_interest']);
+            array_push($is_course_with_interest, $cursos[$k]['is_course_with_interest']);
+        }
+
+        $result = [];
+        for($j = 0; $j < count($cursos); $j++){
+            $soma_cursos[] = [];
+            for($i = 1; $i <= max($parcelas_cursos); $i++){
+                if($i <= $parcelas_sem_juros_cursos[$j] || $is_course_with_interest[$j] == 0){
+                    array_push($soma_cursos[$j], $valores_cursos[$j] / $i);
+                } else {
+                    $x_juros[] = $i;
+                    $valor_porcentagem = $i * $porcentagem_curso;
+                    $valor_parcela_s_juros = $valores_cursos[$j] / $i;
+
+                    $valor_parcela = $valor_parcela_s_juros + (($valor_porcentagem / 100) * $valor_parcela_s_juros);
+                    $valor_final = round($valor_parcela, 2);
+                    array_push($soma_cursos[$j], $valor_final);
+                }
+
+                if($i == max($parcelas_cursos) && count($cursos) == count($soma_cursos)){
+                    $result = array_map(function(...$values) {
+                        return array_sum($values);
+                    }, ...$soma_cursos);
+                }
+            }
+        }
+
+        $parcelas = []; 
+        foreach ($result as $k => $total) {
+            $k++;
+            $key = array_search (max($parcelas_cursos), $parcelas_cursos);
+
+            if(!empty($x_juros)){
+                if($k >= min($x_juros)) {
+                    $descricao = ' Com juros';
+                }else {
+                    $descricao = ' Sem juros';
+                }
+            }else {
+                $descricao = '';
+            }
+
+            array_push($parcelas, ['parcela' => $k, 'valor' => $total, 'descricao' => $descricao]);
+        }
+
         if (Cookie::has('coupon')) {
             $coupon = json_decode(Cookie::get('coupon'), true);
             if (!empty($coupon)) {
@@ -113,7 +181,7 @@ class CheckoutController extends Controller
             }
         }
 
-        return view('pages.checkout.index', compact('items', 'user', 'valor_total', 'coupon', 'coupon_discount'));
+        return view('pages.checkout.index', compact('items', 'parcelas', 'user', 'valor_total', 'coupon', 'coupon_discount'));
     }
 
     /**

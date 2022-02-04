@@ -1,5 +1,8 @@
 <?php
 
+use App\Setting;
+use Illuminate\Support\Facades\DB;
+
 if (!function_exists('format_cpf_cnpj')) {
     /**
      * Format CPF/CNPJ
@@ -411,5 +414,13 @@ if (!function_exists('format_zipcode')) {
         }
 
         return $zipcode;
+    }
+}
+
+if (!function_exists('get_settings')) {
+    function get_settings($key = '')
+    {
+        return DB::table('settings')->where('key', $key)->first();
+        
     }
 }

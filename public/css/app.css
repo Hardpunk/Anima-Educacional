@@ -22105,6 +22105,17 @@ article#termos-uso__wrapper p {
   line-height: 1.15;
   font-size: 1.375rem;
 }
+#course-card-floating .card-floating__inner .card-floating__content .price__wrapper--content .percent-discount-flag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: tomato;
+  color: #fff;
+  padding: 7px;
+  width: 100%;
+  margin-bottom: 1em;
+  font-size: 12px;
+}
 #course-card-floating .card-floating__inner .card-floating__content .price__wrapper--content .price {
   display: flex;
   flex-direction: column;
@@ -22123,6 +22134,11 @@ article#termos-uso__wrapper p {
   color: #444;
   order: 2;
   width: 100%;
+}
+#course-card-floating .card-floating__inner .card-floating__content .price__wrapper--content .price-cash {
+  color: green;
+  font-size: 16px;
+  font-weight: 700;
 }
 #course-card-floating .card-floating__inner .card-floating__content .price__wrapper--content .price-installments {
   font-size: 2rem;

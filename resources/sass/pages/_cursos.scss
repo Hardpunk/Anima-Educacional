@@ -453,6 +453,20 @@
 
       .price__wrapper {
         &--content {
+
+          .percent-discount-flag {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background-color: tomato;
+            color: #fff;
+            padding: 7px;
+            width: 100%;
+            margin-bottom: 1em;
+            font-size: 12px;
+          }
+
           .price {
             display: flex;
             -webkit-box-orient: vertical;
@@ -480,6 +494,12 @@
               -ms-flex-order: 2;
               order: 2;
               width: 100%;
+            }
+
+            &-cash {
+              color: green;
+              font-size: 16px;
+              font-weight: 700;
             }
 
             &-installments {

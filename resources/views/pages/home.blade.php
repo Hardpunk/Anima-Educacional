@@ -2,6 +2,8 @@
     {!! htmlScriptTagJsApi() !!}
 @endsection
 
+@include('pages.partials._area-cursos-prices')
+
 @include('pages.partials._area-cursos')
 
 @include('pages.partials._treinamentos')

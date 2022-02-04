@@ -55,6 +55,10 @@ Route::prefix('painel')->name('admin.')->group(
                         Route::resource('newsletters', 'NewsletterController')->only(['index', 'destroy']);
                         Route::resource('contacts', 'ContactController')->only(['index', 'show', 'destroy']);
                         Route::resource('resumes', 'ResumeController')->only(['index', 'show', 'destroy']);
+                        //Route::resource('settings', 'SettingController');
+
+                        Route::get('/settings', 'SettingController@index')->name('settings');
+                        Route::post('/settings', 'SettingController@update')->name('setting_update');
 
                         Route::fallback(function() {
                             return redirect(route('admin.home'));

@@ -62,6 +62,19 @@ class CourseController extends IpedAPIController
             $curso->teacher_image = "";
         }
 
+        $valor_curso = ($curso->discount_flag == 1 ? $curso->discounted_price : $curso->price);
+
+        if ($curso->installment_no_interest < $curso->max_installment) {
+            $porcentagem_curso = get_settings('interest_installment')->value;
+            $juros_parcela = ($curso->max_installment ?? 1) * $porcentagem_curso;
+            $valor_parcela = $valor_curso / ($curso->max_installment ?? 1);
+            $valor_ = round_up(($valor_parcela + (($juros_parcela / 100) * $valor_parcela)), 2);
+        } else {
+            $valor_ = round_up(($valor_curso / ($curso->max_installment ?? 1)), 2);
+        }
+
+        $curso->valor_final = $valor_;
+
         $in_cart = false;
         if (Cookie::has('cart')) {
             $cart = json_decode(Cookie::get('cart'), true);

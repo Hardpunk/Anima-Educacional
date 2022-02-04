@@ -116,11 +116,11 @@ function recaptchaCallback() {
                             DADOS PESSOAIS
                         </div>
                         <div class="card-body">
-                            <p><strong>NOME:</strong> {{ $user->name }}</p>
+                            {{-- <p><strong>NOME:</strong> {{ $user->name }}</p>
                             <p><strong>E-MAIL:</strong> {{ $user->email }}</p>
                             <p><strong>TELEFONE:</strong> <span class="phone-mask">{{ $user->profile->phone }}</span></p>
                             <p><strong>CPF/CNPJ:</strong> <span class="cpf_cnpj">{{ $user->profile->document_number }}</span></p>
-                            <p><strong>DATA DE NASCIMENTO:</strong> <span class="date">{{ $user->profile->birthday->format('d/m/Y') }}</span></p>
+                            <p><strong>DATA DE NASCIMENTO:</strong> <span class="date">{{ $user->profile->birthday->format('d/m/Y') }}</span></p> --}}
                         </div>
                     </div>
                 </div>
@@ -300,11 +300,12 @@ function recaptchaCallback() {
                                                     <div class="card shadow-sm h-100">
                                                         <div class="card-header font-weight-bold">PARCELAMENTO</div>
                                                         <div class="card-body">
-                                                            @for($i = 1; $i <= 10; $i++)
+                                                            @foreach ($parcelas as $parcela)
                                                             <label class="installment-number d-flex align-items-center">
-                                                                <input type="radio" class="mr-2" value="{{ $i }}" name="cc_installments" {{ $i === 1 ? 'checked' : '' }}>{{ $i }} x&nbsp;<strong>R$ {{ number_format((($valor_total * $coupon_discount)/$i), 2, ',', '.') }} </strong>&nbsp;sem juros
+                                                                <input type="radio" class="mr-2" value="{{ $parcela['parcela'] }}" name="cc_installments" {{ $parcela['parcela']=== 1 ? 'checked' : '' }}>
+                                                                {{ $parcela['parcela'] }} x&nbsp;<strong>R$ {{ number_format((($valor_total * $coupon_discount) / $parcela['parcela']),2,',','.') }} </strong>&nbsp; {{$parcela['descricao']}}
                                                             </label>
-                                                            @endfor
+                                                            @endforeach
                                                         </div>
                                                     </div>
                                                 </div>

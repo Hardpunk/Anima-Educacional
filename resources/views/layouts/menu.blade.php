@@ -15,9 +15,7 @@
 <li class="nav-item {{ Request::is('painel/users*') ? 'active menu-is-opening menu-open' : '' }}">
     <a href="#" class="nav-link">
         <i class="nav-icon fas fa-users"></i>
-        <p>
-            Alunos
-            <i class="fas fa-angle-left right"></i>
+        <p>Alunos <i class="fas fa-angle-left right"></i>
         </p>
     </a>
     <ul class="nav nav-treeview">
@@ -75,4 +73,19 @@
         <i class="nav-icon fas fa-envelope"></i>
         <p>Newsletters</p>
     </a>
+</li>
+
+<li class="nav-item">
+    <a class="nav-link">
+        <i class="nav-icon fas fa-cog"></i>
+        <p>Configurações <i class="fas fa-angle-left right"></i></p>
+    </a>
+    <ul class="nav nav-treeview">
+        <li class="nav-item">
+            <a href="{{ route('admin.settings') }}" class="nav-link {{ Request::is('painel/settings') ? 'active' : '' }}">
+                <i class="fas fa-sliders-h nav-icon"></i>
+                <p>Sistema</p>
+            </a>
+        </li>
+    </ul>
 </li>

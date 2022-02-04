@@ -33,8 +33,7 @@
                 <div class="card-floating__inner">
                     <div class="card card-floating__content">
                         {{--<div class="discount">
-                            <span
-                                class="percentage">{{ number_format(($curso->price / $curso->old_price) * 100, 0) }}%</span>
+                            <span class="percentage">{{ number_format(($curso->price / $curso->old_price) * 100, 0) }}%</span>
                         </div>--}}
                         <div class="course-details__wrapper pt-3 text-center">
                             <p class="category-title m-0">{{ $categoria->title }}</p>
@@ -44,19 +43,24 @@
                         </div>
                         <div class="price__wrapper pt-3 mb-4">
                             <div class="price__wrapper--content">
+                                
+                                <span class="percent-discount-flag">
+                                    <i class="fas fa-fire fa-lg text-white mr-2"></i>Garanta agora <strong class="ml-2">{{ number_format(($curso->price / $curso->old_price) * 100, 0) }}% off</strong>
+                                </span>
+                                
                                 <p class="price mb-0">
-                                    <em class="price-discount">R$ {{ number_format($curso->price, 2, ',', '.') }}</em>
+                                    <em class="price-old text-danger text-line-through">DE R$ {{ number_format($curso->old_price, 2, ',', '.') }}</em>
+                                    <em class="price-cash">POR R$ {{ number_format($curso->price, 2, ',', '.') }}</em>
+
                                     <em class="price-installments">
                                         <span>
-                                            <span> 10x de </span>
-                                            <label class="price-discounted">R$
-                                                {{ number_format($curso->price / 10, 2, ',', '.') }}</label>
+                                            <span> {{ $curso->max_installment }}x de </span>
+                                            <label class="price-discounted">R$ {{ number_format($curso->price / $curso->max_installment, 2, ',', '.') }}</label>
                                             <span> ou</span>
                                         </span>
                                     </em>
+                                    {{-- <em class="price-discount">R$ {{ number_format($curso->price, 2, ',', '.') }}</em> --}}
                                 </p>
-                                {{-- <p class="price-cash text-center">Preço a
-                                    vista:<strong>R$ 269,99</strong></p> --}}
                             </div>
                         </div>
                         <div class="checkout-button__wrapper">
