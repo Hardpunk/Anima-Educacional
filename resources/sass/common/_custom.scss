@@ -16,7 +16,34 @@ img {
     min-height: 85px !important;
 
     .card-title {
-      color: $theme-color-1;
+      color: #26251c;
+      min-height: 95px;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      font-size: 1rem;
+      margin: 0 !important;
+      text-align: center;
+      justify-content: center;
+    }
+
+    .price__wrapper {
+      &--content {
+        .price {
+          .price-discount {
+            color: #666;
+            display: flex;
+            justify-content: center;
+            font-size: 1rem;
+            font-weight: bold;
+          }
+          .price-installments {
+            font-size: 1rem;
+            color: #666;
+            font-weight: 600;
+          }
+        }
+      }
     }
   }
 

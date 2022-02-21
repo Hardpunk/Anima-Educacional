@@ -36,6 +36,7 @@ class CourseController extends IpedAPIController
                 $q->orderBy('students', 'desc');
             }])
             ->first();
+
         $cursos = $categoria->courses;
 
         return view('pages.cursos.categoria',

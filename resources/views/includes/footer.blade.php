@@ -161,6 +161,6 @@
     <p class="copyright m-0 font-weight-bold">{{ config('app.name') }} &copy; {{ date('Y') }}</p>
 </footer>
 
-<a href="https://api.whatsapp.com/send?phone=5519971695820&text=Ol%C3%A1%2C%20encontrei%20o%20n%C3%BAmero%20no%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" class="btn-whatsapp-pulse btn-whatsapp-pulse-border" title="Estamos online no WhatsApp">
+<a href="https://api.whatsapp.com/send?phone=5519971570758&text=Ol%C3%A1%2C%20encontrei%20o%20n%C3%BAmero%20no%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" class="btn-whatsapp-pulse btn-whatsapp-pulse-border" title="Estamos online no WhatsApp">
 	<i class="fab fa-whatsapp"></i>
 </a>

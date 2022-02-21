@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Banner;
 use App\Category;
+use App\Course;
 use App\Trail;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
@@ -21,12 +22,14 @@ class PageController extends Controller
         $categoriasDestaque = Category::whereIn('category_id', $arrayCategorias)
             ->orderByRaw("FIELD(category_id, {$idsCategorias})")->get();
         $categorias = Category::all();
+        $cursosDestaques = Course::limit(3)->get();
         $banners = Banner::orderBy('order')->get();
         $trilhas = Trail::with('courses')->get();
 
         return view('index', [
             'categorias' => $categorias,
             'destaques' => $categoriasDestaque,
+            'cursosDestaques' => $cursosDestaques,
             'trilhas' => $trilhas,
             'banners' => $banners
         ]);
