@@ -54,7 +54,7 @@
 
                             <div class="col-md-4">
                                 <a target="_blank"
-                                   href="https://transparencyreport.google.com/safe-browsing/search?url=https:%2F%2Fwww.seranima.com.br&hl=pt_BR">
+                                   href="https://transparencyreport.google.com/safe-browsing/search?url=https:%2F%2Fwww.anima360.com.br&hl=pt_BR">
                                     <img class="img-fluid" src="/images/site-seguro.png" alt="Selo site seguro">
                                 </a>
                             </div>
@@ -68,7 +68,7 @@
     <div class="subfooter container-fluid py-4">
         <div class="row">
             <div class="col-12 text-center">
-                <h5 class="font-weight-bold mb-3">SER ÂNIMA EDUCACIONAL</h5>
+                <h5 class="font-weight-bold mb-3">ÂNIMA 360</h5>
                 <h5 class="mb-3">Rua Quinzinho Otávio, 317, Centro, Vargem Grande do Sul-SP</h5>
                 <h5 class="font-weight-bold mb-3">seranimaeducacional@gmail.com</h5>
                 <h3 class="font-weight-bold mb-0">Fone: (19) 97169-5820</h3>
@@ -137,7 +137,7 @@
 
                             <div class="col-6 offset-3 offset-sm-0 col-sm-4 mb-3 mb-sm-0">
                                 <a target="_blank"
-                                   href="https://transparencyreport.google.com/safe-browsing/search?url=https:%2F%2Fwww.seranima.com.br&hl=pt_BR">
+                                   href="https://transparencyreport.google.com/safe-browsing/search?url=https:%2F%2Fwww.anima360.com.br&hl=pt_BR">
                                     <img class="img-fluid" src="/images/site-seguro.png" alt="Selo site seguro">
                                 </a>
                             </div>
@@ -151,7 +151,7 @@
     <div class="subfooter container-fluid py-3">
         <div class="row">
             <div class="col-12 text-center">
-                <h5 class="font-weight-bold mb-3">SER ÂNIMA EDUCACIONAL</h5>
+                <h5 class="font-weight-bold mb-3">ÂNIMA 360</h5>
                 <h5 class="mb-3">Rua Quinzinho Otávio, 317, Centro, Vargem Grande do Sul-SP</h5>
                 <h5 class="font-weight-bold mb-3">seranimaeducacional@gmail.com</h5>
                 <h3 class="font-weight-bold mb-0">Fone: (19) 97169-5820</h3>

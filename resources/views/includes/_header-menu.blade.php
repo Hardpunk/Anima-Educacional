@@ -47,7 +47,7 @@
                     </li>
 
                     <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownSerAnima" role="button" data-toggle="dropdown" aria-expanded="false">Ser Ânima</a>
+                        <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownSerAnima" role="button" data-toggle="dropdown" aria-expanded="false">Ânima 360</a>
 
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownSerAnima">
                             <a class="dropdown-item" href="/quem-somos">Quem Somos</a>
@@ -57,7 +57,7 @@
 
                     <li class="nav-item dropdown {{ Request::is('cursos*') ? 'active' : '' }}">
                         <a href="/cursos" class="nav-link dropdown-toggle" id="navbarDropdownCursos" role="button" data-toggle="dropdown" aria-expanded="false">Cursos</a>
-                        
+
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownCursos">
                             <a class="dropdown-item" href="#" target="_blank">Online ao vivo</a>
                             <a class="dropdown-item" href="#" target="_blank">Presencial</a>
