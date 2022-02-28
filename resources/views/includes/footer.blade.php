@@ -71,7 +71,7 @@
                 <h5 class="font-weight-bold mb-3">ÂNIMA 360</h5>
                 <h5 class="mb-3">Rua Quinzinho Otávio, 317, Centro, Vargem Grande do Sul-SP</h5>
                 <h5 class="font-weight-bold mb-3">seranimaeducacional@gmail.com</h5>
-                <h3 class="font-weight-bold mb-0">Fone: (19) 97169-5820</h3>
+                <h3 class="font-weight-bold mb-0">Fone: (19) 97157-0758</h3>
             </div>
         </div>
     </div>
@@ -154,7 +154,7 @@
                 <h5 class="font-weight-bold mb-3">ÂNIMA 360</h5>
                 <h5 class="mb-3">Rua Quinzinho Otávio, 317, Centro, Vargem Grande do Sul-SP</h5>
                 <h5 class="font-weight-bold mb-3">seranimaeducacional@gmail.com</h5>
-                <h3 class="font-weight-bold mb-0">Fone: (19) 97169-5820</h3>
+                <h3 class="font-weight-bold mb-0">Fone: (19) 97157-0758</h3>
             </div>
         </div>
     </div>

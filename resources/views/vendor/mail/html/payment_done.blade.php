@@ -172,7 +172,7 @@
                                         </p>
                                         <p
                                             style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787e; font-size: 14px; line-height: 1.5em; text-align: center;">
-                                            <a href="https://wa.me/5519971695820" title="Atendimento (19) 97169-5820"
+                                            <a href="https://wa.me/5519971695820" title="Atendimento (19) 97157-0758"
                                                 style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787e; font-size: 14px; line-height: 1.5em; vertical-align: middle; text-align: center; display: inline-block;"
                                                 target="_blank">Whatsapp
                                             </a>

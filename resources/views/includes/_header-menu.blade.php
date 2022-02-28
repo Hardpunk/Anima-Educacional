@@ -56,12 +56,12 @@
                     </li>
 
                     <li class="nav-item dropdown {{ Request::is('cursos*') ? 'active' : '' }}">
-                        <a href="/cursos" class="nav-link dropdown-toggle" id="navbarDropdownCursos" role="button" data-toggle="dropdown" aria-expanded="false">Cursos</a>
+                        <a href="/cursos" class="nav-link dropdown-toggle" id="navbarDropdownCursos" role="button" data-toggle="dropdown" aria-expanded="false">Pra Você</a>
 
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownCursos">
-                            <a class="dropdown-item" href="#" target="_blank">Online ao vivo</a>
+                            <a class="dropdown-item" href="#" target="_blank">Online</a>
                             <a class="dropdown-item" href="#" target="_blank">Presencial</a>
-                            <a class="dropdown-item" href="#" target="_blank">Treilhas do conhecimento</a>
+                            <a class="dropdown-item" href="#" target="_blank">Trilhas do conhecimento</a>
                         </div>
                     </li>
 

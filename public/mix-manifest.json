@@ -1,9 +1,9 @@
 {
-    "/js/app.js": "/js/app.js?id=9ba78d34273ca7fcfed040cd3f5be80a",
-    "/js/home.js": "/js/home.js?id=93e7de1976967606e17e07dc8730407a",
-    "/js/admin.js": "/js/admin.js?id=dbf9f18d73419404bb42a8bd15397e5c",
-    "/js/checkout.js": "/js/checkout.js?id=360f508784b03176b78dcf66cb71a2ff",
-    "/css/app.css": "/css/app.css?id=3831dbdb88d57ee9b7a8a574b5dd40f8",
-    "/css/checkout.css": "/css/checkout.css?id=6b00b30fb544097008b08d390eb0caa3",
-    "/css/admin.css": "/css/admin.css?id=17f8b6b71a41d98d43bfc8e99e9e36dd"
+    "/js/app.js": "/js/app.js?id=9ba78d34273ca7fcfed0",
+    "/js/home.js": "/js/home.js?id=93e7de1976967606e17e",
+    "/js/admin.js": "/js/admin.js?id=dbf9f18d73419404bb42",
+    "/js/checkout.js": "/js/checkout.js?id=360f508784b03176b78d",
+    "/css/app.css": "/css/app.css?id=5b8f96b60b21ccfb926f",
+    "/css/checkout.css": "/css/checkout.css?id=af766d18c756d274a5a6",
+    "/css/admin.css": "/css/admin.css?id=17f8b6b71a41d98d43bf"
 }

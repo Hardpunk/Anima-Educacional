@@ -10,11 +10,7 @@
                         <div class="card category-item item">
                             <a class="url-curso" href="{{ route('courses.course_details', [$curso->category_slug, $curso->slug]) }}"
                                title="{{ $curso->title }}">
-                                <div class="card-img-top" style="background-image: url('{{ $curso->image }}');">
-                                    <div class="categories__course-count py-1 px-3">
-                                        <span class="icon-agenda">{{ $curso->courses_total }} CURSOS</span>
-                                    </div>
-                                </div>
+                                <div class="card-img-top" style="background-image: url('{{ $curso->image }}');"></div>
                                 <div class="card-body pt-2 pb-0 px-0 d-flex justify-content-center flex-column">
                                     <div>
                                         <h5 class="card-title my-2 text-semi-bold">{{ $curso->title }}</h5>
@@ -70,11 +66,7 @@
                         <div class="card category-item item">
                             <a class="url-curso" href="{{ route('courses.category', $categoria->slug) }}"
                                title="{{ $categoria->title }}">
-                                <div class="card-img-top" style="background-image: url('{{ $categoria->image }}');">
-                                    <div class="categories__course-count py-1 px-3">
-                                        <span class="icon-agenda">{{ $categoria->courses_total }} CURSOS</span>
-                                    </div>
-                                </div>
+                                <div class="card-img-top" style="background-image: url('{{ $categoria->image }}');"></div>
                                 <div class="card-body pt-2 pb-0 px-0 d-flex justify-content-center flex-column">
                                     <div>
                                         <h5 class="card-title my-2 text-semi-bold">{{ $categoria->title }}</h5>
