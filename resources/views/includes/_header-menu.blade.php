@@ -46,13 +46,8 @@
                         <a href="/" class="nav-link">Início</a>
                     </li>
 
-                    <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownSerAnima" role="button" data-toggle="dropdown" aria-expanded="false">Ânima 360</a>
-
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownSerAnima">
-                            <a class="dropdown-item" href="/quem-somos">Quem Somos</a>
-                            <a class="dropdown-item" href="/projetos-sociais">Projetos Sociais</a>
-                        </div>
+                    <li class="nav-item">
+                        <a href="/quem-somos" class="nav-link">Ânima 360</a>
                     </li>
 
                     <li class="nav-item dropdown {{ Request::is('cursos*') ? 'active' : '' }}">
